@@ -50,7 +50,7 @@ Start the server
 
 ## Tech Stack
 
-**Frontend:** HTML, CSS, Bootstrap 5
+**Frontend:** HTML, SCSS, Bootstrap 5, JavaScript, JQuery
 
 ## Demo
 
