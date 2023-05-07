@@ -78,7 +78,29 @@
         ]
     });
 
+    $('#searchBtn').click(function () {
+        // $('#mobileSearch').slideDown(2000);
+        ShowAndHide()
+    });
 
+    function ShowAndHide() {
+        var x = document.getElementById('mobileSearch');
+        if (x.style.display == 'none') {
+            // x.animate({ transform: 'translateY(0)' }, { duration: 500, fill: 'forwards' })
+
+            x.style.display = 'block';
+            window.setTimeout(() => {
+                x.style.opacity = 1;
+                x.style.transform = 'translateY(0)';
+                x.style.duration = 500;
+                x.style.fill = 'forwards';
+            }, 0)
+        } else {
+            x.style.display = 'none';
+            x.style.opacity = 0;
+            x.style.transform = 'translateY(-20px)';
+        }
+    }
     // Product Slider 3 Column
     // $('.product-slider-3').slick({
     //     autoplay: true,
@@ -260,24 +282,51 @@
 
     });
 
-    // if ($('.bbb_viewed_slider').length) {
-    //     var viewedSlider = $('.bbb_viewed_slider');
+    function darken_screen(yesno) {
+        if (yesno == true) {
+            document.querySelector('.screen-darken').classList.add('active');
+        }
+        else if (yesno == false) {
+            document.querySelector('.screen-darken').classList.remove('active');
+        }
+    }
+
+    function close_offcanvas() {
+        darken_screen(false);
+        document.querySelector('.mobile-offcanvas.show').classList.remove('show');
+        document.body.classList.remove('offcanvas-active');
+    }
+
+    function show_offcanvas(offcanvas_id) {
+        darken_screen(true);
+        document.getElementById(offcanvas_id).classList.add('show');
+        document.body.classList.add('offcanvas-active');
+    }
 
 
 
-    //     if ($('.bbb_viewed_prev').length) {
-    //         var prev = $('.bbb_viewed_prev');
-    //         prev.on('click', function () {
-    //             viewedSlider.trigger('prev.owl.carousel');
-    //         });
-    //     }
+    document.addEventListener("DOMContentLoaded", function () {
 
-    //     if ($('.bbb_viewed_next').length) {
-    //         var next = $('.bbb_viewed_next');
-    //         next.on('click', function () {
-    //             viewedSlider.trigger('next.owl.carousel');
-    //         });
-    //     }
-    // }
+        document.querySelectorAll('[data-trigger]').forEach(function (everyelement) {
+            let offcanvas_id = everyelement.getAttribute('data-trigger');
+            everyelement.addEventListener('click', function (e) {
+                e.preventDefault();
+                show_offcanvas(offcanvas_id);
+            });
+        });
+
+        document.querySelectorAll('.btn-close').forEach(function (everybutton) {
+            everybutton.addEventListener('click', function (e) {
+                close_offcanvas();
+            });
+        });
+
+        document.querySelector('.screen-darken').addEventListener('click', function (event) {
+            close_offcanvas();
+        });
+
+    });
+
+
 })(jQuery);
 

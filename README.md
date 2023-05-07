@@ -23,7 +23,7 @@ Install with npm
 Clone the project
 
 ```bash
-  git clone https://github.com/DanielGraham123/efarm-html
+  git clone ...
 ```
 
 Go to the project directory

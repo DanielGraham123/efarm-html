@@ -193,7 +193,7 @@ h2 {
 .bottom-bar {
     padding: 15px 0;
     background: #ffffff;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .bottom-bar .logo {
@@ -219,6 +219,17 @@ h2 {
     border-radius: 4px;
 }
 
+.bottom-bar .mobile-search.search input[type=text] {
+    height: 35px;
+}
+
+.bottom-bar #mobileSearch {
+    opacity: 0;
+    transform: translateY(-20px);
+    // transition: all 3s ease-in;
+    transition: .6s ease opacity, .6s ease transform;
+}
+
 .bottom-bar .search button {
     position: absolute;
     width: 50px;
@@ -231,6 +242,10 @@ h2 {
     background: $secondary-color;
     color: $primary-white;
     border-radius: 0 2px 2px 0;
+}
+
+.bottom-bar .mobile-search.search button {
+    height: 33px;
 }
 
 .bottom-bar .user {
@@ -262,29 +277,49 @@ h2 {
 
 @media (min-width: 768px) {
     .bottom-bar {
-        max-height: 90px;
+        max-height: auto;
     }
 }
 
 @media (max-width: 767.98px) {
 
-    .bottom-bar .logo,
     .bottom-bar .search,
     .bottom-bar .user {
-        text-align: center;
         margin-bottom: 15px;
+    }
+
+    .bottom-bar .mobile-search.search {
+        margin-bottom: 0;
     }
 
     .bottom-bar .user {
         margin-bottom: 0;
     }
+
+    .bottom-bar .logo a img {
+        max-height: 40px;
+    }
 }
+
+@media (max-width: 991px) {
+    .bottom-bar .logo a img {
+        max-height: 50px;
+    }
+}
+
+@media (max-width: 575px) {
+    .bottom-bar .logo a img {
+        max-height: 40px;
+    }
+}
+
 
 /**********************************/
 /*********** Header CSS ***********/
 /**********************************/
 .header {
     position: relative;
+    margin-bottom: 15px;
 }
 
 .header .col-md-3,
@@ -379,6 +414,34 @@ h2 {
 .header-slider .header-slider-item img {
     height: 400px !important;
     width: 660px;
+    object-fit: cover;
+}
+
+@media (max-width: 991px) {
+    .header-slider .header-slider-item img {
+        width: 100%;
+        height: auto !important;
+        object-fit: cover;
+    }
+
+    .header-slider .header-slider-caption p {
+        font-size: 19px;
+        font-weight: 500;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .header-slider .header-slider-caption p {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .header-slider .header-slider-caption .btn {
+        font-size: 12px;
+        font-weight: 500;
+    }
 }
 
 .header .header-img {
@@ -689,6 +752,12 @@ h2 {
     left: -21px !important;
 }
 
+@media (max-width: 991px) {
+    .owl-nav {
+        left: 0 !important;
+    }
+}
+
 .owl-item {
     width: auto !important;
     margin-top: .2em;
@@ -909,6 +978,85 @@ h2 {
         font-size: 12px;
         top: -29px;
         box-sizing: border-box;
+    }
+}
+
+/****************************************/
+/*********** OFF Canvas Drawer CSS ******/
+/****************************************/
+body.offcanvas-active {
+    overflow: hidden;
+}
+
+.offcanvas-header {
+    display: none;
+}
+
+.screen-darken {
+    height: 100%;
+    width: 0%;
+    z-index: 30;
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(34, 34, 34, 0.6);
+    transition: opacity .2s linear, visibility 0.2s, width 2s ease-in;
+}
+
+.screen-darken.active {
+    z-index: 10;
+    transition: opacity .3s ease, width 0s;
+    opacity: 1;
+    width: 100%;
+    visibility: visible;
+}
+
+/* ============ mobile view ============ */
+@media all and (max-width: 991px) {
+    .container-fluid {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+    .offcanvas-header {
+        display: block;
+    }
+
+    .mobile-offcanvas {
+        visibility: hidden;
+        transform: translateX(-100%);
+        border-radius: 0;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: calc(100vw - 25%);
+        z-index: 1200;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        transition: visibility .3s ease-in-out, transform .3s ease-in-out;
+    }
+
+    .mobile-offcanvas.show {
+        visibility: visible;
+        transform: translateX(0);
+        background-color: $gray-color;
+    }
+
+    .mobile-offcanvas .container,
+    .mobile-offcanvas .container-fluid {
+        display: block;
+    }
+
+}
+
+@media (max-width: 575px) {
+    .container-fluid {
+        padding-left: 1em;
+        padding-right: 1em;
     }
 }
 
