@@ -193,6 +193,11 @@
         ]
     });
 
+    // $('#pills-tab button').click(function (e) {
+    //     e.preventDefault();
+    //     $(this).tab('show');
+    //     console.log("other tab")
+    // });
 
     // Review slider
     $('.review-slider').slick({
