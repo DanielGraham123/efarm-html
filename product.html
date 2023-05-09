@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="lib/slick/slick.css" rel="stylesheet" />
+    <link href="lib/slick/slick-theme.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <span class="screen-darken"></span>
+
+    <!-- Top bar Start -->
+    <div class="top-bar d-lg-block d-none">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 d-flex align-items-center">
+            <div>
+              <i class="fa fa-envelope"></i>
+              contact@efarm.cm
+            </div>
+            <div class="ps-4">
+              <i class="fa fa-phone-alt"></i>
+              +237-655-555-555
+            </div>
+          </div>
+          <div class="col-sm-6 d-flex align-items-center justify-content-end">
+            <div class="dropdown">
+              <button
+                class="btn btn-default text-white dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                English
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">French</a></li>
+                <li><a class="dropdown-item" href="#">English</a></li>
+              </ul>
+            </div>
+            <div class="ps-4">
+              <a class="btn text-white link-underline-opacity-0 btn-link"
+                >Login <i class="far fa-user ms-2"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Top bar End -->
+
+    <!-- Bottom Bar Start -->
+    <div class="bottom-bar">
+      <div class="container-fluid">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md-2 col-sm-4 col-6">
+            <div class="logo float-start">
+              <a href="index.html">
+                <img src="img/logo.png" alt="Logo" />
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-4 d-sm-none d-md-block d-lg-none d-none">
+            <nav class="navbar navbar-expand-md">
+              <div class="justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav me-2 flex-row">
+                  <a href="index.html" class="nav-item nav-link active">Home</a>
+                  <a href="#" class="nav-item nav-link">Products</a>
+                  <a href="#" class="nav-item nav-link">Blog</a>
+                  <a href="#" class="nav-item nav-link">Shop</a>
+                  <a href="#" class="nav-item nav-link">Contact</a>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="col-md-4 col-sm-4 col-6">
+            <!-- Mobile buttons -->
+            <div
+              class="offcanvas-header d-lg-none d-flex align-items-center justify-content-end"
+            >
+              <!-- search -->
+              <div>
+                <a id="searchBtn" class="btn border-0 text-primary">
+                  <i class="fa fa-search fa-md"></i>
+                </a>
+              </div>
+              <!-- shopping cart -->
+              <div>
+                <a class="btn border-0 text-primary">
+                  <i class="fa fa-shopping-cart fa-md"></i>
+                </a>
+              </div>
+              <!-- Hamburger Menu -->
+              <div class="float-end">
+                <a
+                  class="btn border-0"
+                  id="menu-btn"
+                  data-trigger="navbar_main"
+                >
+                  <i class="fa fa-bars fa-md"></i>
+                </a>
+              </div>
+            </div>
+
+            <nav
+              id="navbar_main"
+              class="mobile-offcanvas navbar navbar-expand-md navbar-dark bg-lg-none float-lg-none float-end"
+            >
+              <div class="container-fluid d-lg-none">
+                <div class="offcanvas-header">
+                  <button class="btn-close float-end"></button>
+                </div>
+                <div class="py-3 border-bottom border-primary">
+                  <h4 class="text-center">Profile</h4>
+                </div>
+
+                <ul class="navbar-nav flex-column mt-3">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#"> Login / Register </a>
+                  </li>
+                  <li
+                    class="nav-item dropdown border-bottom border-dark-subtle mb-3"
+                  >
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      data-bs-toggle="dropdown"
+                    >
+                      Categories
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="#"> Submenu item 1</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"> Submenu item 2 </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"> Submenu item 3 </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"> Products </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"> Blog </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"> Shop </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"> Contact </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div
+                class="justify-content-between d-lg-block d-none"
+                id="navbarCollapse"
+              >
+                <div class="navbar-nav me-2">
+                  <a href="index.html" class="nav-item nav-link active">Home</a>
+                  <a href="#" class="nav-item nav-link">Products</a>
+                  <a href="#" class="nav-item nav-link">Blog</a>
+                  <a href="#" class="nav-item nav-link">Shop</a>
+                  <a href="#" class="nav-item nav-link">Contact</a>
+                </div>
+              </div>
+            </nav>
+          </div>
+
+          <div class="col-md-4 d-none d-lg-block">
+            <div class="search">
+              <input type="text" placeholder="Search" />
+              <button><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+          <div class="col-md-2 d-none d-lg-block">
+            <div class="user d-flex align-items-center">
+              <a href="#" class="btn wishlist d-flex">
+                <i class="far fa-heart"></i>
+                <span>(0)</span>
+              </a>
+              <a href="#" class="btn cart d-flex">
+                <i class="fa fa-shopping-cart"></i>
+                <span>(0)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="mobileSearch" class="row mt-1 mb-0" style="display: none">
+          <div class="col-12">
+            <div class="mobile-search search">
+              <input type="text" placeholder="Search" />
+              <button><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom Bar End -->
+
+    <!-- Breadcrumb Start -->
+    <div class="breadcrumb-wrap">
+      <div class="container-fluid">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Products</a></li>
+          <li class="breadcrumb-item active">Product Detail</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Product Detail Start -->
+    <div class="product-detail">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="product-detail-top">
+              <div class="row p-4">
+                <div class="col-md-5">
+                  <div class="product-slider-single normal-slider">
+                    <img src="img/product-1.png" alt="Product Image" />
+                    <img src="img/product-2.jpeg" alt="Product Image" />
+                    <img src="img/product-2.jpeg" alt="Product Image" />
+                    <img src="img/product-3.png" alt="Product Image" />
+                    <img src="img/product-3.png" alt="Product Image" />
+                    <img src="img/product-3.png" alt="Product Image" />
+                  </div>
+                  <div class="product-slider-single-nav normal-slider">
+                    <div class="slider-nav-img">
+                      <img src="img/product-2.jpeg" alt="Product Image" />
+                    </div>
+                    <div class="slider-nav-img">
+                      <img src="img/product-2.jpeg" alt="Product Image" />
+                    </div>
+                    <div class="slider-nav-img">
+                      <img src="img/product-2.jpeg" alt="Product Image" />
+                    </div>
+                    <div class="slider-nav-img">
+                      <img src="img/product-3.png" alt="Product Image" />
+                    </div>
+                    <div class="slider-nav-img">
+                      <img src="img/product-3.png" alt="Product Image" />
+                    </div>
+                    <div class="slider-nav-img">
+                      <img src="img/product-3.png" alt="Product Image" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-7">
+                  <div class="product-content">
+                    <div class="mb-0">
+                      <div class="instock mb-1">
+                        <i class="fa fa-check"></i>
+                        In Stock
+                      </div>
+                    </div>
+                    <div class="title"><h2>Product Name</h2></div>
+                    <div class="d-flex align-items-center mt-2 mb-3 basic-info">
+                      <div class="d-flex align-items-center">
+                        <span class="ratings">
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star"></span>
+                          <span class="fa fa-star"></span>
+                        </span>
+                        <span class="rating-value ms-2">(4.5)</span>
+                      </div>
+
+                      <div class="sep mx-2">
+                        <i class="fa fa-circle"></i>
+                      </div>
+
+                      <div class="d-flex align-items-center">
+                        <div><i class="far fa-comments"></i></div>
+                        <div class="review ms-2">32 Reviews</div>
+                      </div>
+
+                      <div class="sep mx-2">
+                        <i class="fa fa-circle"></i>
+                      </div>
+
+                      <div class="d-flex align-items-center">
+                        <div><i class="fas fa-basket-shopping"></i></div>
+                        <div class="ms-2">100 items sold</div>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <p>XAF 1,000 <span>XAF 1,500</span></p>
+                    </div>
+                    <div class="quantity">
+                      <h5>Qty:</h5>
+                      <div class="qty">
+                        <button class="btn-minus">
+                          <i class="fa fa-minus"></i>
+                        </button>
+                        <input type="text" value="1" />
+                        <button class="btn-plus">
+                          <i class="fa fa-plus"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="border-top border-bottom px-0 py-2">
+                      <div class="ps-1">
+                        <div class="d-flex product_attr align-items-center">
+                          <p class="attr_name">Category:</p>
+                          <p class="attr_text">Tubercules</p>
+                        </div>
+                        <div class="d-flex product_attr align-items-center">
+                          <p class="attr_name">Weight:</p>
+                          <p class="attr_text">200kg</p>
+                        </div>
+                        <div class="d-flex product_attr align-items-center">
+                          <p class="attr_name">Other:</p>
+                          <p class="attr_text">Lorem ipsum</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="action mt-4 mb-5">
+                      <button
+                        class="btn btn-primary me-2 text-white fw-semibold rounded-1 shadow-sm btn-md px-4 py-2"
+                      >
+                        <i class="fa fa-shopping-cart me-2"></i>Add to Cart
+                      </button>
+                      <button
+                        class="btn btn-outline-primary me-2 fw-semibold rounded-1 shadow-sm btn-md px-3 py-2"
+                      >
+                        <i class="far fa-heart me-2"></i>Add to Wishlist
+                      </button>
+                    </div>
+
+                    <div class="mt-2">
+                      <div class="d-flex align-items-center">
+                        <p class="me-2 mb-0">Share:</p>
+
+                        <div>
+                          <a
+                            href="#"
+                            class="btn btn-outline-warning btn-sm me-2 rounded-circle"
+                          >
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                          <a
+                            href="#"
+                            class="btn btn-outline-warning btn-sm me-2 rounded-circle"
+                          >
+                            <i class="fab fa-twitter"></i>
+                          </a>
+                          <a
+                            href="#"
+                            class="btn btn-outline-warning btn-sm me-2 rounded-circle"
+                          >
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                          <a
+                            href="#"
+                            class="btn btn-outline-warning btn-sm me-2 rounded-circle"
+                          >
+                            <i class="fab fa-linkedin-in"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row product-detail-bottom">
+              <div class="col-lg-12">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="pills-home-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-home"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-home"
+                      aria-selected="true"
+                    >
+                      Home
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="pills-profile-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-profile"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-profile"
+                      aria-selected="false"
+                    >
+                      Profile
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="pills-contact-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-contact"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-contact"
+                      aria-selected="false"
+                    >
+                      Contact
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="pills-disabled-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-disabled"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-disabled"
+                      aria-selected="false"
+                      disabled
+                    >
+                      Disabled
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="pills-home"
+                    role="tabpanel"
+                    aria-labelledby="pills-home-tab"
+                    tabindex="0"
+                  >
+                    ...
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="pills-profile"
+                    role="tabpanel"
+                    aria-labelledby="pills-profile-tab"
+                    tabindex="0"
+                  >
+                    ...
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="pills-contact"
+                    role="tabpanel"
+                    aria-labelledby="pills-contact-tab"
+                    tabindex="0"
+                  >
+                    ...
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="pills-disabled"
+                    role="tabpanel"
+                    aria-labelledby="pills-disabled-tab"
+                    tabindex="0"
+                  >
+                    ...
+                  </div>
+                </div>
+
+                <ul
+                  class="nav nav-pills nav-justified"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      data-toggle="pill"
+                      data-bs-target="#description"
+                      role="tab"
+                      type="button"
+                      aria-selected="true"
+                    >
+                      Description
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      data-toggle="pill"
+                      data-bs-target="#specification"
+                      role="tab"
+                      type="button"
+                      aria-selected="false"
+                    >
+                      Specification
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      data-toggle="pill"
+                      data-bs-target="#reviews"
+                      role="tab"
+                      type="button"
+                      aria-selected="false"
+                    >
+                      Reviews (1)
+                    </button>
+                  </li>
+                </ul>
+
+                <div class="tab-content" id="pills-tabContent">
+                  <div
+                    id="description"
+                    class="container tab-pane fade show active"
+                    role="tabpanel"
+                  >
+                    <h4>Product description</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      In condimentum quam ac mi viverra dictum. In efficitur
+                      ipsum diam, at dignissim lorem tempor in. Vivamus tempor
+                      hendrerit finibus. Nulla tristique viverra nisl, sit amet
+                      bibendum ante suscipit non. Praesent in faucibus tellus,
+                      sed gravida lacus. Vivamus eu diam eros. Aliquam et sapien
+                      eget arcu rhoncus scelerisque. Suspendisse sit amet neque
+                      neque. Praesent suscipit et magna eu iaculis. Donec arcu
+                      libero, commodo ac est a, malesuada finibus dolor. Aenean
+                      in ex eu velit semper fermentum. In leo dui, aliquet sit
+                      amet eleifend sit amet, varius in turpis. Maecenas
+                      fermentum ut ligula at consectetur. Nullam et tortor leo.
+                    </p>
+                  </div>
+                  <div
+                    id="specification"
+                    class="container tab-pane fade"
+                    role="tabpanel"
+                  >
+                    <h4>Product specification</h4>
+                    <ul>
+                      <li>Lorem ipsum dolor sit amet</li>
+                      <li>Lorem ipsum dolor sit amet</li>
+                      <li>Lorem ipsum dolor sit amet</li>
+                      <li>Lorem ipsum dolor sit amet</li>
+                      <li>Lorem ipsum dolor sit amet</li>
+                    </ul>
+                  </div>
+                  <div
+                    id="reviews"
+                    class="container tab-pane fade"
+                    role="tabpanel"
+                  >
+                    <div class="reviews-submitted">
+                      <div class="reviewer">
+                        Phasellus Gravida - <span>01 Jan 2020</span>
+                      </div>
+                      <div class="ratting">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                      <p>
+                        Sed ut perspiciatis unde omnis iste natus error sit
+                        voluptatem accusantium doloremque laudantium, totam rem
+                        aperiam.
+                      </p>
+                    </div>
+                    <div class="reviews-submit">
+                      <h4>Give your Review:</h4>
+                      <div class="ratting">
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="row form">
+                        <div class="col-sm-6">
+                          <input type="text" placeholder="Name" />
+                        </div>
+                        <div class="col-sm-6">
+                          <input type="email" placeholder="Email" />
+                        </div>
+                        <div class="col-sm-12">
+                          <textarea placeholder="Review"></textarea>
+                        </div>
+                        <div class="col-sm-12">
+                          <button>Submit</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Product Detail End -->
+
+    <!-- Best Selling List Start -->
+    <div class="container-fluid mb-5">
+      <div class="row">
+        <div class="col">
+          <div class="bbb_main_container">
+            <div
+              class="bbb_viewed_title_container d-flex align-items-center justify-content-between"
+            >
+              <h3 class="bbb_viewed_title">Best Selling</h3>
+              <div class="d-none d-lg-block">
+                <button class="btn btn-primary">
+                  View All <i class="ms-2 fa fa-angle-right"></i>
+                </button>
+              </div>
+              <div class="d-sm-block d-md-block d-lg-none d-none">
+                <a class="btn btn-link text-primary btn-sm"
+                  >More <i class="fa fa-angle-right"></i
+                ></a>
+              </div>
+              <div class="d-lg-none d-sm-none d-block">
+                <button class="btn btn-default p-2 text-primary btn-sm">
+                  <i class="fa fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="bbb_viewed_slider_container">
+              <div class="owl-carousel owl-theme bbb_viewed_slider">
+                <div class="owl-item">
+                  <div
+                    class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center"
+                  >
+                    <div class="bbb_viewed_image">
+                      <img src="/img/product-1.png" alt="" />
+                    </div>
+                    <div
+                      class="bbb_viewed_content d-flex justify-content-between align-items-end"
+                    >
+                      <div class="">
+                        <div class="prdt_name fs-6 fw-medium">
+                          Pineapple ffd
+                        </div>
+                        <div class="bbb_viewed_price text-primary float-start">
+                          500 XAF
+                        </div>
+                        <div>
+                          <s class="text-secondary float-start old_price"
+                            >800 XAF</s
+                          >
+                        </div>
+                      </div>
+                      <div class="align-bottom">
+                        <div class="text-primary discount">-25%</div>
+                      </div>
+                    </div>
+                    <!-- <ul class="item_marks">
+                        <li class="item_mark item_discount">-25%</li>
+                        <li class="item_mark item_new">new</li>
+                      </ul> -->
+                    <ul class="product-links">
+                      <li>
+                        <a href="#" data-tip="Add to Wishlist"
+                          ><i class="fas fa-heart"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a href="#" data-tip="Quick View"
+                          ><i class="fa fa-search"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a href="" data-tip="Add to Cart"
+                          ><i class="fa fa-shopping-cart"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="owl-item">
+                  <div
+                    class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center"
+                  >
+                    <div class="bbb_viewed_image">
+                      <img src="/img/product-2.jpeg" alt="" />
+                    </div>
+                    <div
+                      class="bbb_viewed_content d-flex justify-content-between align-items-end"
+                    >
+                      <div class="">
+                        <div class="prdt_name fs-6 fw-medium">Pineapple</div>
+                        <div class="bbb_viewed_price text-primary float-start">
+                          500 XAF
+                        </div>
+                        <div>
+                          <s class="text-secondary float-start old_price"
+                            >800 XAF</s
+                          >
+                        </div>
+                      </div>
+                      <div class="align-bottom">
+                        <div class="text-primary discount">-25%</div>
+                      </div>
+                      <ul class="product-links">
+                        <li>
+                          <a href="#" data-tip="Add to Wishlist"
+                            ><i class="fas fa-heart"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="#" data-tip="Quick View"
+                            ><i class="fa fa-search"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="" data-tip="Add to Cart"
+                            ><i class="fa fa-shopping-cart"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-item">
+                  <div
+                    class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center"
+                  >
+                    <div class="bbb_viewed_image">
+                      <img src="/img/product-3.png" alt="" />
+                    </div>
+                    <div
+                      class="bbb_viewed_content d-flex justify-content-between align-items-end"
+                    >
+                      <div class="">
+                        <div class="prdt_name fs-6 fw-medium">Pineapple</div>
+                        <div class="bbb_viewed_price text-primary float-start">
+                          500 XAF
+                        </div>
+                        <div>
+                          <s class="text-secondary float-start old_price"
+                            >800 XAF</s
+                          >
+                        </div>
+                      </div>
+                      <div class="align-bottom">
+                        <div class="text-primary discount">-25%</div>
+                      </div>
+                      <ul class="product-links">
+                        <li>
+                          <a href="#" data-tip="Add to Wishlist"
+                            ><i class="fas fa-heart"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="#" data-tip="Quick View"
+                            ><i class="fa fa-search"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="" data-tip="Add to Cart"
+                            ><i class="fa fa-shopping-cart"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-item">
+                  <div
+                    class="bbb_viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center"
+                  >
+                    <div class="bbb_viewed_image">
+                      <img src="/img/product-1.png" alt="" />
+                    </div>
+                    <div
+                      class="bbb_viewed_content d-flex justify-content-between align-items-end"
+                    >
+                      <div class="">
+                        <div class="prdt_name fs-6 fw-medium">Pineapple</div>
+                        <div class="bbb_viewed_price text-primary float-start">
+                          500 XAF
+                        </div>
+                        <div>
+                          <s class="text-secondary float-start old_price"
+                            >800 XAF</s
+                          >
+                        </div>
+                      </div>
+                      <div class="align-bottom">
+                        <div class="text-primary discount">-25%</div>
+                      </div>
+                      <ul class="product-links">
+                        <li>
+                          <a href="#" data-tip="Add to Wishlist"
+                            ><i class="fas fa-heart"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="#" data-tip="Quick View"
+                            ><i class="fa fa-search"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="" data-tip="Add to Cart"
+                            ><i class="fa fa-shopping-cart"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-item">
+                  <div
+                    class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center"
+                  >
+                    <div class="bbb_viewed_image">
+                      <img src="/img/product-2.jpeg" alt="" />
+                    </div>
+                    <div
+                      class="bbb_viewed_content d-flex justify-content-between align-items-end"
+                    >
+                      <div class="">
+                        <div class="prdt_name fs-6 fw-medium">Pineapple</div>
+                        <div class="bbb_viewed_price text-primary float-start">
+                          500 XAF
+                        </div>
+                        <div>
+                          <s class="text-secondary float-start old_price"
+                            >800 XAF</s
+                          >
+                        </div>
+                      </div>
+                      <div class="align-bottom">
+                        <div class="text-primary discount">-25%</div>
+                      </div>
+                      <ul class="product-links">
+                        <li>
+                          <a href="#" data-tip="Add to Wishlist"
+                            ><i class="fas fa-heart"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="#" data-tip="Quick View"
+                            ><i class="fa fa-search"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="" data-tip="Add to Cart"
+                            ><i class="fa fa-shopping-cart"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-item">
+                  <div
+                    class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center"
+                  >
+                    <div class="bbb_viewed_image">
+                      <img src="/img/product-3.png" alt="" />
+                    </div>
+                    <div
+                      class="bbb_viewed_content d-flex justify-content-between align-items-end"
+                    >
+                      <div class="">
+                        <div class="prdt_name fs-6 fw-medium">Pineapple</div>
+                        <div class="bbb_viewed_price text-primary float-start">
+                          500 XAF
+                        </div>
+                        <div>
+                          <s class="text-secondary float-start old_price"
+                            >800 XAF</s
+                          >
+                        </div>
+                      </div>
+                      <div class="align-bottom">
+                        <div class="text-primary discount">-25%</div>
+                      </div>
+                      <ul class="product-links">
+                        <li>
+                          <a href="#" data-tip="Add to Wishlist"
+                            ><i class="fas fa-heart"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="#" data-tip="Quick View"
+                            ><i class="fa fa-search"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="" data-tip="Add to Cart"
+                            ><i class="fa fa-shopping-cart"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-item">
+                  <div
+                    class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center"
+                  >
+                    <div class="bbb_viewed_image">
+                      <img src="/img/product-2.jpeg" alt="" />
+                    </div>
+                    <div
+                      class="bbb_viewed_content d-flex justify-content-between align-items-end"
+                    >
+                      <div class="">
+                        <div class="prdt_name fs-6 fw-medium">Pineapple</div>
+                        <div class="bbb_viewed_price text-primary float-start">
+                          500 XAF
+                        </div>
+                        <div>
+                          <s class="text-secondary float-start old_price"
+                            >800 XAF</s
+                          >
+                        </div>
+                      </div>
+                      <div class="align-bottom">
+                        <div class="text-primary discount">-25%</div>
+                      </div>
+                      <ul class="product-links">
+                        <li>
+                          <a href="#" data-tip="Add to Wishlist"
+                            ><i class="fas fa-heart"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="#" data-tip="Quick View"
+                            ><i class="fa fa-search"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="" data-tip="Add to Cart"
+                            ><i class="fa fa-shopping-cart"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Best Selling List End -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

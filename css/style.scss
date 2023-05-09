@@ -8,11 +8,15 @@ $accent-color-imp: #E44934;
 $accent-color-tint: #E4BD34;
 $transparent-dark: rgba(0, 0, 0, 0.6);
 $gray-color: #ebebeb;
+$transparent-green: rgb(27 161 98 / 25%);
+
+$lh: 1.2rem;
 
 $theme-colors: (
     "primary": $secondary-color,
     "danger": $accent-color-imp,
     "dark": $primary-dark,
+    "warning": $accent-color-tint,
 );
 
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -611,6 +615,20 @@ h2 {
     font-weight: 600;
 }
 
+@media (max-width: 991px) {
+    .bbb_viewed_title {
+        font-size: 20px;
+        margin-bottom: 9px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bbb_viewed_title {
+        font-size: 16px;
+        margin-bottom: 9px;
+    }
+}
+
 .bbb_viewed_nav_container {
     position: absolute;
     right: -5px;
@@ -654,7 +672,103 @@ h2 {
     padding-left: 15px;
     padding-right: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
 }
+
+.bbb_viewed_item .product-links {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: 76px;
+    left: 10px;
+}
+
+.bbb_viewed_item .product-links li {
+    margin: 0 0 4px;
+    transform: translateX(-100px);
+    transition: all 0.5s ease 0s;
+}
+
+.bbb_viewed_item:hover .product-links li {
+    transform: translateX(0);
+}
+
+.bbb_viewed_item:hover .product-links li:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.bbb_viewed_item:hover .product-links li:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.bbb_viewed_item .product-links li:last-child {
+    margin: 0;
+}
+
+.bbb_viewed_item .product-links li a {
+    color: $secondary-color !important;
+    background: $transparent-green;
+    font-size: 12px;
+    text-align: center;
+    line-height: 38px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    transition: all 200ms ease 0s;
+}
+
+.bbb_viewed_item .product-links li a:hover {
+    background: $accent-color-imp;
+    color: #fff !important;
+}
+
+.bbb_viewed_item .product-links li a:before,
+.bbb_viewed_item .product-links li a:after {
+    content: attr(data-tip);
+    color: #fff;
+    background-color: #000;
+    font-size: 10px;
+    line-height: 15px;
+    border-radius: 0;
+    padding: 8px 15px;
+    border-radius: 5px;
+    white-space: nowrap;
+    transform: translateY(-50%);
+    visibility: hidden;
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transition: all 0.3s ease;
+}
+
+.bbb_viewed_item .product-links li a:after {
+    content: '';
+    height: 15px;
+    width: 15px;
+    padding: 0;
+    border-radius: 0;
+    transform: translateY(-50%) rotate(45deg);
+    right: 58px;
+    z-index: -1;
+}
+
+.bbb_viewed_item .product-links li a:hover:before,
+.bbb_viewed_item .product-links li a:hover:after {
+    visibility: visible;
+}
+
+.bbb_viewed_item .product-links li a:hover:before {
+    left: 55px;
+}
+
+.bbb_viewed_item .product-links li a:hover:after {
+    left: 53px;
+}
+
 
 .bbb_viewed_image {
     width: 160px;
@@ -765,12 +879,12 @@ h2 {
     cursor: pointer;
 }
 
-.owl-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
-    z-index: 1;
-    transition: all .4s ease-in-out;
-}
+// .owl-item:hover {
+//     transform: scale(1.05);
+//     box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+//     z-index: 1;
+//     transition: all .4s ease-in-out;
+// }
 
 .owl-nav div {
     position: absolute !important;
@@ -1061,14 +1175,430 @@ body.offcanvas-active {
 }
 
 /****************************************/
+/*********** Blogs Style CSS ************/
+/****************************************/
+.blogs .card {
+    border: none !important;
+    box-shadow: 5px 5px 10px #cecece,
+        -5px -5px 10px #f2f2f2;
+}
+
+.blogs .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.blogs .tagging span {
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.blogs .tagging span:nth-child(2) {
+    margin-left: 12px !important;
+}
+
+.blogs .card-title {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: $secondary-color !important;
+}
+
+.blogs .card-text {
+    line-height: $lh;
+    font-size: 12px;
+}
+
+.truncate-overflow {
+    --max-lines: 2;
+    position: relative;
+    max-height: calc($lh * var(--max-lines));
+    overflow: hidden;
+}
+
+.truncate-overflow::before {
+    position: absolute;
+    content: "...";
+    bottom: 0;
+    right: 32px;
+}
+
+.truncate-overflow::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 1rem;
+    height: 1rem;
+    background: white;
+}
+
+.blogs a.read_more {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/**********************************************/
+/*********** App Download Style CSS ***********/
+/**********************************************/
+.app_download {
+    background: url(../img/app-download.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 180px 0;
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.mobile_app_download {
+    padding: 80px 0;
+    background-color: $secondary-color;
+    color: $primary-white;
+
+}
+
+.mobile_app_download h4 {
+    // font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .app_download {
+        background: url(../img/app-download-md.jpg) no-repeat center center;
+        background-size: cover;
+        padding: 180px 0;
+        position: relative;
+        height: auto;
+        width: 100%;
+    }
+}
+
+/**********************************/
+/********* Breadcrumb CSS *********/
+/**********************************/
+.breadcrumb-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.breadcrumb-wrap .breadcrumb {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.breadcrumb-wrap .breadcrumb-item {
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.breadcrumb-wrap .breadcrumb-item a {
+    color: $secondary-color !important;
+    text-decoration: none !important;
+}
+
+.breadcrumb-wrap .breadcrumb-item a:hover {
+    text-decoration: underline !important;
+}
+
+/**********************************/
+/******* Product Detail CSS *******/
+/**********************************/
+.product-detail {
+    position: relative;
+    width: 100%;
+    padding: 30px 0;
+}
+
+.product-detail .product-detail-top,
+.product-detail .product-detail-bottom {
+    margin-bottom: 30px;
+}
+
+.product-detail .product-detail-top {
+    padding: 0;
+    background: #ffffff;
+}
+
+.product-detail .product-slider-single img {
+    width: 100%;
+    height: 411px;
+    object-fit: cover;
+}
+
+.product-detail .product-slider-single-nav {
+    margin: 15px 30px 30px 30px;
+    border: 3px double $secondary-color;
+}
+
+.product-detail .product-slider-single-nav .slider-nav-img {
+    border-right: 1px solid $secondary-color;
+    overflow: hidden;
+}
+
+.product-detail .product-slider-single-nav img {
+    width: 100%;
+    transition: all .3s;
+}
+
+.product-detail .product-slider-single-nav img:hover {
+    transform: scale(1.2);
+}
+
+.product-detail .product-content,
+.product-detail .product-content .title,
+.product-detail .product-content .ratting,
+.product-detail .product-content .price,
+.product-detail .product-content .details,
+.product-detail .product-content .quantity,
+.product-detail .product-content .action {
+    position: relative;
+    width: 100%;
+}
+
+.product-detail .product-content {
+    padding: 30px;
+}
+
+@media (min-width: 768px) {
+    .product-detail .product-content {
+        padding-left: 0;
+    }
+}
+
+.product-detail .product-content .instock {
+    background-color: $secondary-color;
+    font-size: 12px;
+    font-weight: bold;
+    color: $primary-white;
+    border-radius: 7px;
+    display: inline-block;
+    padding: 2px 7px;
+}
+
+.product-detail .product-content .title h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.product-detail .basic-info {
+    font-size: 12px;
+}
+
+.product-detail .basic-info i {
+    font-size: 14px;
+}
+
+.product-detail .product-content .basic-info .sep i {
+    font-size: 6px;
+    color: #b8b8b8;
+}
+
+.product-detail .product-content .price,
+.product-detail .product-content .quantity,
+.product-detail .product-content .p-size,
+.product-detail .product-content .p-color {
+    margin-bottom: 15px;
+}
+
+.product-detail .product-content .price h4,
+.product-detail .product-content .quantity h5,
+.product-detail .product-content .p-size h4,
+.product-detail .product-content .p-color h4 {
+    display: inline-block;
+    width: 80px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.product-detail .product-content .quantity h5 {
+    font-size: 14px;
+    width: auto;
+}
+
+.product-detail .product-content .price p {
+    display: inline-block;
+    color: $secondary-color;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.product-detail .product-content .price span {
+    color: #999999;
+    text-decoration: line-through;
+    margin-left: 12px;
+}
+
+.product-detail .product-content .quantity .qty {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.product-detail .product-content .quantity button {
+    width: 30px;
+    height: 30px;
+    padding: 2px 0;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    background: $secondary-color;
+    border: none;
+}
+
+.product-detail .product-content .quantity button.btn-minus {
+    border-radius: 4px 0 0 4px;
+}
+
+.product-detail .product-content .quantity button.btn-plus {
+    border-radius: 0 4px 4px 0;
+}
+
+.product-detail .product-content .quantity input {
+    width: 40px;
+    height: 30px;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    background: #000000;
+    border: none;
+}
+
+.product-detail .product_attr {
+    font-size: 15px;
+    margin-bottom: -12px;
+}
+
+.product-detail .product_attr .attr_name {
+    width: 100px;
+    color: $secondary-color;
+}
+
+.product-detail .product-content .action a:first-child {
+    margin-right: 11px;
+}
+
+.product-detail .product-content .action a i {
+    margin-right: 5px;
+}
+
+.product-detail .nav.nav-pills .nav-link {
+    color: $secondary-color;
+    background: #000000;
+    border-radius: 0;
+    transition: all .3s;
+}
+
+.product-detail .nav.nav-pills .nav-link:hover,
+.product-detail .nav.nav-pills .nav-link.active {
+    color: #000000;
+    background: $secondary-color;
+}
+
+.product-detail .tab-content {
+    background: #ffffff;
+    padding: 25px 15px 15px 15px;
+}
+
+.product-detail .tab-content ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.product-detail .tab-content ul li {
+    margin-bottom: 10px;
+}
+
+.product-detail .tab-content ul li::before {
+    content: '\f061';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    padding-right: 5px;
+}
+
+.product-detail .tab-content .reviews-submitted {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.product-detail .tab-content .reviewer {
+    color: $secondary-color;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.product-detail .tab-content .reviewer span {
+    color: #666666;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.product-detail .tab-content .ratting {
+    color: $secondary-color;
+    margin-bottom: 15px;
+}
+
+.product-detail .tab-content .reviews-submit .ratting {
+    font-size: 24px;
+}
+
+.product-detail .tab-content .form input {
+    width: 100%;
+    height: 35px;
+    padding: 0 15px;
+    color: #666666;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.product-detail .tab-content .form textarea {
+    width: 100%;
+    height: 80px;
+    padding: 6px 15px;
+    color: #666666;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.product-detail .tab-content .form button {
+    display: inline-block;
+    height: 35px;
+    padding: 0 15px;
+    color: $secondary-color;
+    background: #ffffff;
+    border: 1px solid $secondary-color;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    transition: all .3s;
+}
+
+.product-detail .tab-content .form button:hover {
+    color: #ffffff;
+    background: $secondary-color;
+}
+
+
+/****************************************/
 /*********** Custom Style CSS ***********/
 /****************************************/
 .btn-primary,
 .btn-primary:hover {
-    color: #fff;
+    color: $primary-white;
 }
 
 .btn-dark,
 .btn-dark:hover {
     color: $accent-color-tint;
+}
+
+.btn.btn-outline-primary:hover {
+    color: $primary-white;
+}
+
+.btn.btn-outline-warning:hover {
+    color: $primary-dark !important;
 }
