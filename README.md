@@ -54,5 +54,5 @@ Start the server
 
 ## Demo
 
-[E-Farm Home](https://master--wondrous-banoffee-55638f.netlify.app/)
-[E-Farm Product Detail](https://master--wondrous-banoffee-55638f.netlify.app/product.html)
+- [E-Farm Home](https://master--wondrous-banoffee-55638f.netlify.app/)
+- [E-Farm Product Detail](https://master--wondrous-banoffee-55638f.netlify.app/product.html)
