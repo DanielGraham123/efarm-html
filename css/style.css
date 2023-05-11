@@ -10658,8 +10658,14 @@ h2, .h2 {
   height: 40px;
   padding: 0 15px;
   color: #191919;
-  border: 1px solid #1C8A45;
-  border-radius: 4px;
+  border: 1px solid #191919 !important;
+  border-radius: 0;
+}
+
+.bottom-bar .search input[type=text]:focus-visible {
+  border: 1.5px solid #1C8A45 !important;
+  box-shadow: none;
+  outline: none !important;
 }
 
 .bottom-bar .mobile-search.search input[type=text] {
@@ -10804,29 +10810,28 @@ h2, .h2 {
 .header-slider {
   position: relative;
   width: 100%;
+  height: 400px;
 }
 
 .header-slider .header-slider-item {
   position: relative;
+  width: 565px !important;
 }
 
-.header-slider .header-slider-caption {
+.header-slider .header-slider-button {
   position: absolute;
-  top: 20%;
-  left: 20%;
-  width: 60%;
-  height: 60%;
+  top: 48.5%;
+  left: 19px;
   padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.7);
   transition: all 0.3s;
   z-index: 1;
 }
 
-.header-slider .header-slider-caption p {
+.header-slider .header-slider-button p {
   text-align: center;
   color: #ffffff;
   font-size: 22px;
@@ -10834,12 +10839,23 @@ h2, .h2 {
   font-weight: 700;
 }
 
-.header-slider .header-slider-caption .btn {
+.header-slider .header-slider-button .btn {
   color: #F8F8F8 !important;
   background-color: #E44934;
+  padding: 10px 24px;
+  font-weight: 600;
+  font-size: 15px;
 }
 
-.header-slider .header-slider-caption .btn i {
+.header-slider .header-slider-button .btn:hover {
+  background-color: #bd3220;
+}
+
+.header-slider .header-slider-button .btn.slide_btn {
+  border-radius: 5px !important;
+}
+
+.header-slider .header-slider-button .btn i {
   margin-right: 5px;
 }
 
@@ -10857,17 +10873,17 @@ h2, .h2 {
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .header-slider .header-slider-caption p {
+  .header-slider .header-slider-button p {
     font-size: 19px;
     font-weight: 500;
   }
 }
 @media (max-width: 768px) {
-  .header-slider .header-slider-caption p {
+  .header-slider .header-slider-button p {
     font-size: 16px;
     font-weight: 400;
   }
-  .header-slider .header-slider-caption .btn {
+  .header-slider .header-slider-button .btn {
     font-size: 12px;
     font-weight: 500;
   }
@@ -11024,7 +11040,7 @@ h2, .h2 {
   padding-top: 11px;
   padding-bottom: 11px;
   position: relative;
-  border-radius: 8px;
+  border-radius: 0;
 }
 
 .bbb_viewed_title_container {
@@ -11571,12 +11587,14 @@ body.offcanvas-active {
 .blogs .card {
   border: none !important;
   box-shadow: 5px 5px 10px #cecece, -5px -5px 10px #f2f2f2;
+  border-radius: 0 !important;
 }
 
 .blogs .card-img-top {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 0 !important;
 }
 
 .blogs .tagging span {
@@ -11633,10 +11651,49 @@ body.offcanvas-active {
 .app_download {
   background: url(../img/app-download.jpg) no-repeat center center;
   background-size: cover;
-  padding: 180px 0;
+  padding: 100px 0;
   position: relative;
   height: auto;
   width: 100%;
+  overflow: hidden;
+}
+
+.app_download div:nth-child(2) {
+  padding: 0 100px !important;
+  margin-left: -80px;
+  margin-top: -33px;
+}
+
+.app_download h1, .app_download .h1 {
+  font-weight: 900;
+  text-shadow: 4px 4px 2px rgba(255, 255, 255, 0.6);
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+.app_download .sub_download {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.app_download .available {
+  background-color: #E4BD34;
+  color: #191919;
+  padding: 7px 15px;
+  font-size: 16px;
+  font-weight: bolder;
+  width: 60%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.app_download .download_desc {
+  font-size: 13px;
+  letter-spacing: 1px;
 }
 
 .mobile_app_download {
@@ -11904,9 +11961,10 @@ body.offcanvas-active {
 
 .product-detail .nav.nav-pills .nav-link {
   color: #1C8A45 !important;
-  background: #000000;
+  background: #F8F8F8;
   border-radius: 0;
   transition: all 0.3s;
+  border: 1px solid #1C8A45;
 }
 
 .product-detail .nav.nav-pills .nav-link:hover,
@@ -12035,6 +12093,10 @@ body.offcanvas-active {
 /****************************************/
 /*********** Custom Style CSS ***********/
 /****************************************/
+.btn {
+  border-radius: 0 !important;
+}
+
 .btn-primary,
 .btn-primary:hover {
   color: #F8F8F8;
@@ -12051,4 +12113,27 @@ body.offcanvas-active {
 
 .btn.btn-outline-warning:hover {
   color: #191919 !important;
+}
+
+.btn.translate_btn {
+  border: none !important;
+}
+
+.translate .dropdown-item:active {
+  background-color: #1C8A45 !important;
+  color: #F8F8F8 !important;
+}
+
+.login_btn.btn-link {
+  text-decoration: none !important;
+}
+
+.login_btn.btn-link:hover {
+  text-decoration: underline !important;
+  color: white !important;
+}
+
+.btn-primary.btn:focus-visible,
+.btn-primary.btn:first-child:active {
+  color: white !important;
 }/*# sourceMappingURL=style.css.map */

@@ -29,7 +29,6 @@
     />
 
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/product-zoom.css" />
   </head>
   <body>
     <span class="screen-darken"></span>
@@ -249,53 +248,36 @@
             <div class="product-detail-top">
               <div class="row p-4">
                 <div class="col-md-5">
-                  <ul id="glasscase" class="gc-start">
-                    <li>
-                      <img src="/img/product-1.png" alt="Text" />
-                    </li>
-                    <li>
-                      <img src="/img/product-2.jpeg" alt="Text" />
-                    </li>
-                    <li>
-                      <img src="/img/product-3.png" alt="Text" />
-                    </li>
-                    <li>
-                      <img
-                        src="https://source.unsplash.com/featured?vegetables"
-                        alt="Text"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://source.unsplash.com/featured?yam"
-                        alt="Text"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://source.unsplash.com/featured?beans"
-                        alt="Text"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://source.unsplash.com/featured?tomatoes"
-                        alt="Text"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://source.unsplash.com/featured?lemon"
-                        alt="Text"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="https://source.unsplash.com/featured?okro"
-                        alt="Text"
-                      />
-                    </li>
-                  </ul>
+                  <div class="product-slider-single normal-slider">
+                    <img src="img/product-1.png" alt="Product Image" />
+                    <img src="img/product-2.jpeg" alt="Product Image" />
+                    <img src="img/product-2.jpeg" alt="Product Image" />
+                    <img src="img/product-3.png" alt="Product Image" />
+                    <img src="img/product-3.png" alt="Product Image" />
+                    <img src="img/product-3.png" alt="Product Image" />
+                  </div>
+                  <div
+                    class="product-slider-single-nav normal-slider d-none d-lg-block"
+                  >
+                    <div class="slider-nav-img">
+                      <img src="img/product-2.jpeg" alt="Product Image" />
+                    </div>
+                    <div class="slider-nav-img">
+                      <img src="img/product-2.jpeg" alt="Product Image" />
+                    </div>
+                    <div class="slider-nav-img">
+                      <img src="img/product-2.jpeg" alt="Product Image" />
+                    </div>
+                    <div class="slider-nav-img">
+                      <img src="img/product-3.png" alt="Product Image" />
+                    </div>
+                    <div class="slider-nav-img">
+                      <img src="img/product-3.png" alt="Product Image" />
+                    </div>
+                    <div class="slider-nav-img">
+                      <img src="img/product-3.png" alt="Product Image" />
+                    </div>
+                  </div>
                 </div>
 
                 <div class="col-md-7">
@@ -909,16 +891,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/slick/slick.min.js"></script>
-    <script src="js/glasscase.js"></script>
     <script src="js/main.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        //If your <ul> has the id "glasscase"
-        $("#glasscase").glassCase({
-          thumbsPosition: "bottom",
-          widthDisplay: 660,
-        });
-      });
-    </script>
   </body>
 </html>

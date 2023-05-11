@@ -193,12 +193,6 @@
         ]
     });
 
-    // $('#pills-tab button').click(function (e) {
-    //     e.preventDefault();
-    //     $(this).tab('show');
-    //     console.log("other tab")
-    // });
-
     // Review slider
     $('.review-slider').slick({
         autoplay: true,
@@ -263,19 +257,19 @@
         }
     });
 
-    // Product Slider
-
+    // Product List Slider
     $('.bbb_viewed_slider').owlCarousel({
         nav: true,
+        autoWidth: true,
         navigation: true,
         navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>", "<i class='fa fa-angle-right' aria-hidden='true'></i>"],
         dots: true,
         loop: true,
         margin: 8,
-        autoplay: false,
+        autoplay: true,
         autoplayTimeout: 6000,
         responsiveClass: true,
-        // items: 5,
+        items: 5,
         responsive:
         {
             0: { items: 1, nav: true },
@@ -307,8 +301,6 @@
         document.getElementById(offcanvas_id).classList.add('show');
         document.body.classList.add('offcanvas-active');
     }
-
-
 
     document.addEventListener("DOMContentLoaded", function () {
 
