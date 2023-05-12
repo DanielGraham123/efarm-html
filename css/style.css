@@ -10796,6 +10796,11 @@ h2, .h2 {
   color: #1C8A45;
 }
 
+.header .slider-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .header .navbar i {
   color: #1C8A45;
   width: 20px;
@@ -10810,12 +10815,10 @@ h2, .h2 {
 .header-slider {
   position: relative;
   width: 100%;
-  height: 400px;
 }
 
 .header-slider .header-slider-item {
   position: relative;
-  width: 565px !important;
 }
 
 .header-slider .header-slider-button {
@@ -10831,6 +10834,11 @@ h2, .h2 {
   z-index: 1;
 }
 
+@media (max-width: 768px) {
+  .header-slider .header-slider-button {
+    padding: 9px 0;
+  }
+}
 .header-slider .header-slider-button p {
   text-align: center;
   color: #ffffff;
@@ -10876,6 +10884,10 @@ h2, .h2 {
   .header-slider .header-slider-button p {
     font-size: 19px;
     font-weight: 500;
+  }
+  .header .slider-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 @media (max-width: 768px) {
@@ -11711,10 +11723,37 @@ body.offcanvas-active {
   .app_download {
     background: url(../img/app-download-md.jpg) no-repeat center center;
     background-size: cover;
-    padding: 180px 0;
+    padding: 90px 0;
     position: relative;
     height: auto;
     width: 100%;
+  }
+  .app_download div:nth-child(2) {
+    padding: 0 0px !important;
+    margin-left: -60px;
+    margin-top: -33px;
+  }
+  .app_download .sub_download {
+    font-size: 18px;
+  }
+  .app_download .download_desc {
+    font-size: 11px;
+    padding: 0 30px;
+  }
+  .app_download .available {
+    font-size: 13px;
+    width: 50%;
+    padding: 7px 7px;
+  }
+  .app_download h1, .app_download .h1 {
+    font-weight: 800;
+    font-size: 26px;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 991px) {
+  .app_download div:nth-child(2) {
+    padding: 0 !important;
   }
 }
 /**********************************/
