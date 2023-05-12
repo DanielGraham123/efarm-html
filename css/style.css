@@ -11998,16 +11998,22 @@ body.offcanvas-active {
   margin-right: 5px;
 }
 
-.product-detail .nav.nav-pills .nav-link {
+.product-detail .nav.nav-tabs .nav-link {
   color: #1C8A45 !important;
-  background: #F8F8F8;
-  border-radius: 0;
   transition: all 0.3s;
-  border: 1px solid #1C8A45;
+  font-weight: 500;
 }
 
-.product-detail .nav.nav-pills .nav-link:hover,
-.product-detail .nav.nav-pills .nav-link.active {
+@media (max-width: 768px) {
+  .product-detail ul.nav {
+    background: none !important;
+  }
+  .product-detail .nav.nav-tabs .nav-link {
+    padding: 5px 8px;
+  }
+}
+.product-detail .nav.nav-tabs .nav-link:hover,
+.product-detail .nav.nav-tabs .nav-link.active {
   color: #F8F8F8 !important;
   background: #1C8A45;
 }
