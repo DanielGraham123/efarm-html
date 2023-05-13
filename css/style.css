@@ -10762,6 +10762,49 @@ h2, .h2 {
   }
 }
 /**********************************/
+/********* Category List CSS ******/
+/**********************************/
+.categories .item {
+  float: left;
+}
+
+.categories .item > div {
+  margin: 4px 6px;
+}
+
+.categories .pad15 img {
+  border-radius: 50% !important;
+  border: 1px solid #ebebeb;
+  width: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #F8F8F8;
+}
+
+.categories .slick-prev,
+.categories .slick-next {
+  display: none !important;
+}
+
+.categories .slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+.categories .category_name p {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.categories .slick-slide {
+  margin: 0 10px;
+}
+
+.categories .categ_card {
+  height: 200px !important;
+}
+
+/**********************************/
 /*********** Header CSS ***********/
 /**********************************/
 .header {
@@ -12233,4 +12276,8 @@ body.offcanvas-active {
 .btn-primary.btn:focus-visible,
 .btn-primary.btn:first-child:active {
   color: white !important;
+}
+
+.bg-gray {
+  background-color: #ebebeb;
 }/*# sourceMappingURL=style.css.map */
