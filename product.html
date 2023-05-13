@@ -34,10 +34,12 @@
     <span class="screen-darken"></span>
 
     <!-- Top bar Start -->
-    <div class="top-bar d-lg-block d-none">
+    <div class="top-bar">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-sm-6 d-flex align-items-center">
+          <div
+            class="col-md-6 col-12 justify-content-center justify-content-md-start d-flex align-items-center"
+          >
             <div>
               <i class="fa fa-envelope"></i>
               contact@efarm.cm
@@ -47,23 +49,26 @@
               +237-655-555-555
             </div>
           </div>
-          <div class="col-sm-6 d-flex align-items-center justify-content-end">
-            <div class="dropdown">
+          <div
+            class="col-md-6 col-12 justify-content-center justify-content-md-end d-flex align-items-center justify-content-end"
+          >
+            <div class="dropdown translate">
               <button
-                class="btn btn-default text-white dropdown-toggle"
+                class="btn btn-default translate_btn text-white dropdown-toggle"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 English
               </button>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu py-0 rounded-0">
                 <li><a class="dropdown-item" href="#">French</a></li>
                 <li><a class="dropdown-item" href="#">English</a></li>
               </ul>
             </div>
-            <div class="ps-4">
-              <a class="btn text-white link-underline-opacity-0 btn-link"
+            <div class="ps-4 d-none d-lg-block">
+              <a
+                class="btn text-white login_btn link-underline-opacity-0 btn-link"
                 >Login <i class="far fa-user ms-2"></i
               ></a>
             </div>
@@ -369,29 +374,17 @@
                       <div class="d-flex align-items-center">
                         <p class="me-2 mb-0">Share:</p>
 
-                        <div>
-                          <a
-                            href="#"
-                            class="btn btn-outline-warning btn-sm me-2 rounded-circle"
-                          >
+                        <div class="share-icons">
+                          <a href="#" class="btn btn-sm me-2 facebook">
                             <i class="fab fa-facebook-f"></i>
                           </a>
-                          <a
-                            href="#"
-                            class="btn btn-outline-warning btn-sm me-2 rounded-circle"
-                          >
+                          <a href="#" class="btn btn-sm me-2 twitter">
                             <i class="fab fa-twitter"></i>
                           </a>
-                          <a
-                            href="#"
-                            class="btn btn-outline-warning btn-sm me-2 rounded-circle"
-                          >
+                          <a href="#" class="btn btn-sm me-2 instagram">
                             <i class="fab fa-instagram"></i>
                           </a>
-                          <a
-                            href="#"
-                            class="btn btn-outline-warning btn-sm me-2 rounded-circle"
-                          >
+                          <a href="#" class="btn btn-sm me-2 linkedin">
                             <i class="fab fa-linkedin-in"></i>
                           </a>
                         </div>

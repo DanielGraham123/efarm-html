@@ -110,11 +110,16 @@ h2 {
 @media (max-width: 575.98px) {
     .top-bar {
         border-bottom: 1px solid rgba(255, 255, 255, .1);
+        font-size: 12px !important;
     }
 
     .top-bar .col-sm-6:first-child,
     .top-bar .col-sm-6:last-child {
         text-align: center;
+    }
+
+    .top-bar .btn.translate_btn {
+        font-size: 12px !important;
     }
 }
 
@@ -484,7 +489,9 @@ h2 {
     .header-slider .header-slider-button .btn {
         font-size: 12px;
         font-weight: 500;
+        padding: 8px 13px;
     }
+
 }
 
 .header .header-img {
@@ -1734,6 +1741,28 @@ body.offcanvas-active {
 .product-detail .tab-content .form button:hover {
     color: #ffffff;
     background: $secondary-color;
+}
+
+.product-detail .share-icons a.btn {
+    border-radius: 50% !important;
+    color: $primary-white !important;
+}
+
+.product-detail .share-icons a.btn.facebook {
+    background: #3b5998;
+    padding: 4px 10.5px;
+}
+
+.product-detail .share-icons a.btn.twitter {
+    background: #55acee;
+}
+
+.product-detail .share-icons a.btn.instagram {
+    background: #e4405f;
+}
+
+.product-detail .share-icons a.btn.linkedin {
+    background: #0077b5;
 }
 
 /*******************************************/

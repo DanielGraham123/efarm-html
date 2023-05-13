@@ -276,7 +276,8 @@
             575: { items: 2, nav: true },
             768: { items: 3, nav: true },
             991: { items: 4, nav: true },
-            1199: { items: 5, nav: true }
+            1199: { items: 5, nav: true },
+            1299: { items: 5, nav: true },
         },
 
     });
