@@ -32,6 +32,10 @@ body {
     background: $primary-white;
 }
 
+.container-fluid {
+    max-width: 1268px !important;
+}
+
 a {
     color: $primary-dark !important;
 }
@@ -1626,6 +1630,15 @@ body.offcanvas-active {
 .product-detail .product_attr .attr_name {
     width: 100px;
     color: $secondary-color;
+}
+
+.product-detail .product_attr.shop_info .attr_name {
+    color: $accent-color-imp !important;
+}
+
+.product-detail .product_attr.shop_info a.attr_text {
+    color: $secondary-color !important;
+    text-decoration: underline !important;
 }
 
 .product-detail .product-content .action a:first-child {

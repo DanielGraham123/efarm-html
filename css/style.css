@@ -10484,6 +10484,10 @@ body {
   background: #F8F8F8;
 }
 
+.container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+  max-width: 1268px !important;
+}
+
 a {
   color: #191919 !important;
 }
@@ -11993,6 +11997,15 @@ body.offcanvas-active {
 .product-detail .product_attr .attr_name {
   width: 100px;
   color: #1C8A45;
+}
+
+.product-detail .product_attr.shop_info .attr_name {
+  color: #E44934 !important;
+}
+
+.product-detail .product_attr.shop_info a.attr_text {
+  color: #1C8A45 !important;
+  text-decoration: underline !important;
 }
 
 .product-detail .product-content .action a:first-child {
