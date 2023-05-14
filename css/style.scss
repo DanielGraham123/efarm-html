@@ -891,6 +891,11 @@ h2 {
     object-fit: cover;
 }
 
+.owl-carousel .owl-item .bbb_viewed_image img:hover {
+    // transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
 .bbb_viewed_content {
     width: 100%;
     margin-top: 15px
@@ -1095,15 +1100,19 @@ h2 {
 /*********** Recommended List Style CSS ***********/
 /**************************************************/
 .recommended .bbb_main_container {
-    background-color: $secondary-color;
+    // background-color: $secondary-color;
 }
 
 .recommended .bbb_viewed_title {
-    color: $primary-white;
+    // color: $primary-white;
 }
 
 .recommended .bbb_viewed_title_container {
-    border-bottom: solid 1px $primary-white;
+    // border-bottom: solid 1px $primary-white;
+}
+
+.recommended .owl-item .bbb_viewed_item:nth-child(1) {
+    margin-bottom: 10px;
 }
 
 /*******************************************************/

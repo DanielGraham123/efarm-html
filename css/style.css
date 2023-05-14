@@ -11283,6 +11283,10 @@ h2, .h2 {
      object-fit: cover;
 }
 
+.owl-carousel .owl-item .bbb_viewed_image img:hover {
+  transition: all 0.3s ease-in-out;
+}
+
 .bbb_viewed_content {
   width: 100%;
   margin-top: 15px;
@@ -11472,16 +11476,8 @@ h2, .h2 {
 /**************************************************/
 /*********** Recommended List Style CSS ***********/
 /**************************************************/
-.recommended .bbb_main_container {
-  background-color: #1C8A45;
-}
-
-.recommended .bbb_viewed_title {
-  color: #F8F8F8;
-}
-
-.recommended .bbb_viewed_title_container {
-  border-bottom: solid 1px #F8F8F8;
+.recommended .owl-item .bbb_viewed_item:nth-child(1) {
+  margin-bottom: 10px;
 }
 
 /*******************************************************/
