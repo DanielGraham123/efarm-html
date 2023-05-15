@@ -43,38 +43,44 @@
     });
 
 
-    // Product Slider 4 Categories
-    $('.product-slider-4').slick({
-        autoplay: true,
+    // Categories Slider
+    $('.category-slider').slick({
+        autoplay: false,
         infinite: true,
         dots: false,
         arrows: true,
-        slidesToShow: 6,
-        slidesToScroll: 1,
+        slidesToShow: 7,
+        slidesToScroll: 2,
         centerMode: false,
+        prevArrow: "<button class='slide-arrow prev-arrow'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+        nextArrow: "<button class='slide-arrow next-arrow'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
         responsive: [
             {
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 6,
+                    slidesToShow: 7,
+                    slidesToScroll: 2,
                 }
             },
             {
                 breakpoint: 992,
                 settings: {
                     slidesToShow: 4,
+                    slidesToScroll: 2,
                 }
             },
             {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 3,
+                    slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 576,
                 settings: {
                     slidesToShow: 2,
+                    slidesToScroll: 1,
                 }
             },
         ]

@@ -10764,26 +10764,63 @@ h2, .h2 {
 /**********************************/
 /********* Category List CSS ******/
 /**********************************/
-.categories .item {
-  float: left;
+.categories {
+  background-color: #F8F8F8;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
 }
 
-.categories .item > div {
-  margin: 4px 6px;
+.categories .category-slider a {
+  text-decoration: none !important;
+}
+
+.categories .pad15 {
+  border-radius: 30% !important;
+  border: 1px solid #ebebeb;
+  margin: 0 8px;
+  background-color: #ebebeb;
 }
 
 .categories .pad15 img {
-  border-radius: 50% !important;
-  border: 1px solid #ebebeb;
-  width: 120px;
+  width: 130px;
   -o-object-fit: cover;
      object-fit: cover;
-  background-color: #F8F8F8;
 }
 
-.categories .slick-prev,
-.categories .slick-next {
-  display: none !important;
+.categories .pad15 img:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+
+.categories .slick-arrow {
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.categories .slide-arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+}
+
+.categories button.slide-arrow {
+  border-radius: 50% !important;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  color: #E4BD34 !important;
+  border: none !important;
+}
+
+.categories button:hover {
+  background-color: #191919 !important;
+}
+
+.categories .prev-arrow {
+  left: -20px;
+}
+
+.categories .next-arrow {
+  right: -20px;
 }
 
 .categories .slick-prev:before,
@@ -10791,17 +10828,30 @@ h2, .h2 {
   color: black;
 }
 
+.categories .category_name {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
 .categories .category_name p {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .categories .slick-slide {
-  margin: 0 10px;
+  margin: 0 1px;
 }
 
 .categories .categ_card {
-  height: 200px !important;
+  height: 185px !important;
+  padding-top: 8px;
+  padding-bottom: 25px;
+  width: 100%;
 }
 
 /**********************************/
@@ -10809,12 +10859,6 @@ h2, .h2 {
 /**********************************/
 .header {
   position: relative;
-  margin-bottom: 15px;
-}
-
-.header .col-md-3,
-.header .col-md-6 {
-  margin-bottom: 30px;
 }
 
 .header .navbar {
@@ -10919,7 +10963,7 @@ h2, .h2 {
 }
 
 .header-slider .header-slider-item img {
-  height: 400px !important;
+  height: 402px !important;
   width: 660px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -10968,12 +11012,16 @@ h2, .h2 {
   width: 100%;
   height: 50%;
   overflow: hidden;
-  margin-bottom: 5px;
+}
+
+.header .header-img:nth-of-type(1) .img-item {
+  margin-bottom: 2px;
 }
 
 .header .img-item img {
   width: 100%;
-  height: 200px;
+  height: -moz-fit-content;
+  height: fit-content;
   -o-object-fit: cover;
      object-fit: cover;
 }
