@@ -1156,7 +1156,9 @@ h2 {
     border-bottom: solid 1px $primary-white;
 }
 
-.recommended .owl-item .bbb_viewed_item:nth-child(1) {
+.recommended .owl-item .bbb_viewed_item:nth-child(1),
+.featured .owl-item .bbb_viewed_item:nth-child(1),
+.best_selling .owl-item .bbb_viewed_item:nth-child(1) {
     margin-bottom: 10px;
 }
 
