@@ -11485,6 +11485,10 @@ h2, .h2 {
   overflow: hidden;
 }
 
+.featured .bbb_viewed_item s.old_price {
+  font-size: 12px !important;
+}
+
 /**********************************/
 /*********** Services CSS **********/
 /**********************************/
