@@ -12289,6 +12289,11 @@ body.offcanvas-active {
 /*******************************************/
 /************** Ad Banner CSS **************/
 /*******************************************/
+.ad_banners {
+  width: 100%;
+  display: flex;
+}
+
 .banner_div {
   box-shadow: 2px 4px 10px 0px rgba(157, 148, 148, 0.5);
   justify-content: center;
@@ -12299,6 +12304,24 @@ body.offcanvas-active {
   margin-right: 3px;
   padding: 4px;
   align-self: stretch;
+}
+
+@media (max-width: 991px) {
+  .ad_banners {
+    flex-wrap: wrap;
+  }
+  .banner_div {
+    flex-basis: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    align-self: stretch;
+  }
+}
+.banner_div .ad_image {
+  padding: 50px;
+  height: 100%;
 }
 
 .banner_div .ad_image {
