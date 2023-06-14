@@ -13,6 +13,7 @@ $transparent-green: rgb(27 161 98 / 25%);
 $transparent-yellow: rgba(255, 251, 0, 0.25);
 
 $lh: 1.2rem;
+$primary: #f7b633;
 
 $theme-colors: (
     "primary": $secondary-color,
@@ -549,9 +550,9 @@ h2 {
 }
 
 .header-slider .header-slider-item img {
-    height: 402px !important;
-    width: 660px;
-    object-fit: cover;
+    height: 422px !important;
+    width: 573px;
+    // object-fit: cover;
 }
 
 @media (max-width: 991px) {
@@ -2073,6 +2074,207 @@ body.offcanvas-active {
 }
 
 /****************************************/
+/************* Footer CSS ***************/
+/****************************************/
+.tagcloud {
+    a {
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 4px 10px;
+        margin-bottom: 7px;
+        margin-right: 4px;
+        border-radius: 4px;
+        font-size: 11px;
+
+        &:hover {
+            border: 1px solid #000;
+        }
+    }
+}
+
+footer {
+    padding: 5em 0;
+}
+
+//FOOTER 04
+.footer {
+    background: #272727;
+    padding-bottom: 0;
+
+    .border-top {
+        border-color: darken(#272727, 5%) !important;
+        background: darken(#272727, 5%);
+    }
+
+    .footer-heading {
+        font-size: 13px;
+        color: $primary-white;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+
+        .logo {
+            letter-spacing: none;
+            font-size: 16px;
+            color: $primary-white;
+            text-transform: capitalize;
+        }
+    }
+
+    p {
+        color: rgba(255, 255, 255, .5);
+    }
+
+    a {
+        color: rgba(255, 255, 255, .7) !important;
+
+        text-decoration: none;
+
+        &:hover {
+            color: $accent-color-tint !important;
+        }
+    }
+
+    a.more {
+        color: $secondary-color !important;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .ftco-footer-social {
+        li {
+            list-style: none;
+            margin: 0 5px 0 0;
+            display: inline-block;
+
+            a {
+                color: $primary-white;
+            }
+
+        }
+    }
+
+    .tagcloud {
+        a {
+            border: 1px solid rgba(255, 255, 255, .1);
+            color: $primary-white;
+        }
+    }
+
+    .list-unstyled {
+        li {
+            a {
+                color: rgba(255, 255, 255, .7) !important;
+                text-decoration: none;
+            }
+        }
+
+        a {
+            color: rgba(255, 255, 255, .7) !important;
+            text-decoration: none;
+
+            &:hover {
+                color: $accent-color-tint !important;
+            }
+        }
+    }
+
+    .ftco-footer-social {
+        li {
+            a {
+                border-radius: 4px;
+                border: 1px solid rgba(255, 255, 255, .1);
+                height: 40px;
+                width: 40px;
+                display: block;
+                background: rgba(0, 0, 0, 0.05);
+                position: relative;
+
+                i.fa-brands {
+                    position: absolute;
+                    font-size: 15px;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+
+    .subscribe-form {
+        .form-group {
+            position: relative;
+            margin-bottom: 0;
+            @include border-radius(0);
+
+            input {
+                background: rgba(255, 255, 255, .05) !important;
+                border: none !important;
+                outline: none !important;
+                color: rgba(255, 255, 255, .3) !important;
+                font-size: 16px;
+                @include border-radius(0);
+
+                &::-webkit-input-placeholder {
+                    /* Chrome/Opera/Safari */
+                    color: rgba(255, 255, 255, .3) !important;
+                }
+
+                &::-moz-placeholder {
+                    /* Firefox 19+ */
+                    color: rgba(255, 255, 255, .3) !important;
+                }
+
+                &:-ms-input-placeholder {
+                    /* IE 10+ */
+                    color: rgba(255, 255, 255, .3) !important;
+                }
+
+                &:-moz-placeholder {
+                    /* Firefox 18- */
+                    color: rgba(255, 255, 255, .3) !important;
+                }
+
+                &:focus {
+                    outline: none !important;
+                    box-shadow: none;
+                }
+            }
+
+            .submit {
+                color: $primary-white !important;
+                display: block;
+                width: 52px;
+                height: 52px;
+                font-size: 16px;
+                background: $secondary-color !important;
+                border: none;
+                @include border-radius(0);
+
+                &:hover,
+                &:focus {
+                    text-decoration: none !important;
+                    outline: none !important;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        a {
+            color: rgba(255, 255, 255, .5);
+        }
+    }
+}
+
+
+
+/****************************************/
 /*********** Custom Style CSS ***********/
 /****************************************/
 .btn {
@@ -2126,5 +2328,32 @@ body.offcanvas-active {
 
 
 /*********************************/
-/************Product Item*********/
+/************Cart Number*********/
 /*********************************/
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+    background-color: #c67605;
+}
+
+#lblCartCount {
+    font-size: 11px;
+    background: $accent-color-imp;
+    color: #F8F8F8;
+    padding: 2px 5px;
+    vertical-align: top;
+    margin-left: 0px;
+    margin-top: 0;
+    font-weight: 600;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
